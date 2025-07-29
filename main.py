@@ -3,6 +3,7 @@ from moviepy import VideoFileClip
 from pydub import AudioSegment
 import os
 import json
+from ai_enrich import enrich_with_groq, test_ai
 
 # Global result list
 results = []
@@ -82,4 +83,6 @@ def main(folder_path):
 
 
 if __name__ == "__main__":
-    main("C:/Users/rohit chakravorty/OneDrive - Oracle Corporation/Recordings/Video Clips/hackathon/agents/select")
+    # main("C:/Users/rohit chakravorty/OneDrive - Oracle Corporation/Recordings/Video Clips/hackathon/agents/select/test_code")
+    enrich_with_groq("all_transcripts.json")
+    # test_ai()
